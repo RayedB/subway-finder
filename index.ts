@@ -1,9 +1,9 @@
-import express from "express"
+import express, {Application} from "express"
 import {getCoordinates} from './geoLocationController'
 import swaggerJsdoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 
-const app = express();
+const app: Application = express();
 const PORT = 8000;
 
 const options = {
