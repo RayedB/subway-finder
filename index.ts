@@ -24,11 +24,14 @@ const options = {
   apis: ["/"],
 };
 
-const specs = swaggerJsdoc(options);
 app.use(
-  "/api-docs",
+  "/docs",
   swaggerUi.serve,
-  swaggerUi.setup(specs)
+  swaggerUi.setup(undefined, {
+    swaggerOptions: {
+      url: "./public/swagger.json",
+    },
+  })
 );
 
 
